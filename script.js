@@ -37,5 +37,7 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
             btn.textContent = 'Iniciar Sesión';
             btn.disabled = false;
         }, 1500);
+        window.location.href ="entrada.html";
     }
+
 });
