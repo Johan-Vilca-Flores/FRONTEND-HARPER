@@ -20,7 +20,7 @@ document.getElementById('registroForm').addEventListener('submit', async functio
 
     try {
         // 👉 Cambia esta URL por tu backend en Vercel
-        const API_BASE = "https://asistencia-harper-i6iy.vercel.app/";
+        const API_BASE = "https://asistencia-harper-i6iy.vercel.app";
 
         const response = await fetch(`${API_BASE}/api/attendances/check-in/`, {
             method: "POST",
