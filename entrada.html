@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Registro de Entrada por DNI</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -13,20 +13,21 @@
                 <h1>Registro de Entrada</h1>
                 <p>Ingresa el DNI para registrar el ingreso</p>
             </div>
-            
-            <form id="registroForm">
+
+            <form id="registroForm" novalidate>
                 <div class="form-group">
                     <label for="dni">Número de DNI</label>
-                    <input type="text" id="dni" name="dni" placeholder="Ej: 12345678" required>
-                    <div class="error-message" id="dniError">Por favor ingresa un DNI válido (8 dígitos)</div>
+                    <input type="text" id="dni" name="dni" placeholder="Ej: 12345678" required maxlength="8" />
+                    <div class="error-message" id="dniError" style="display:none">Por favor ingresa un DNI válido (8 dígitos)</div>
                 </div>
-                
-                <button type="submit" class="btn-login">Registrar Entrada</button>
+
+                <button type="submit" class="btn-login" id="btnEntrada">Registrar Entrada</button>
+                <p id="msg" class="msg"></p>
             </form>
         </div>
-        
+
         <div class="table-side">
-            <h2>Registros Recientes</h2>
+            <h2>Registros Recientes (hoy)</h2>
             <table class="registros-table">
                 <thead>
                     <tr>
@@ -36,11 +37,11 @@
                         <th>Hora de Entrada</th>
                     </tr>
                 </thead>
-                <tbody id="registrosTableBody">
-                    </tbody>
+                <tbody id="registrosTableBody"></tbody>
             </table>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
